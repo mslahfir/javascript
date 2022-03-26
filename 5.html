@@ -1,0 +1,27 @@
+<html>
+ <body>
+  <script>
+class Article {
+  constructor(title, rating) {
+    this.title = title;
+    this.rating = rating;
+  }
+
+  static compare(articleA, articleB) {
+    return articleB.rating - articleA.rating;
+  }
+}
+
+// usage
+let articles = [
+  new Article("HTML", 90),
+  new Article("CSS", 100),
+  new Article("JavaScript", 120)
+];
+
+articles.sort(Article.compare);
+
+alert( articles[0].title );
+  </script>
+ </body>
+</html>

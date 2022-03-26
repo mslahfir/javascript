@@ -1,0 +1,16 @@
+<html>
+ <body>
+	<form >
+		<input placeholder="Mark" id="input"/>
+		<button onClick="validate(event,this.form)">Validate</button>
+	</form>
+  <script>
+  	function validate(event,form)
+	{
+		event.preventDefault();
+		const input = parseInt(form.elements["input"].value);
+		!input?alert("Enter the mark"):input>60?alert("Pass"):alert("Fail");;
+	}
+  </script>
+ </body>
+</html>

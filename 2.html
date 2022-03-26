@@ -1,0 +1,17 @@
+<html>
+ <body>
+  <script>
+	function curry(a){
+		return function curry1(b){
+			return function curry2(c){
+				return function curry3(d){
+						return a*b*c;
+				}
+			}
+		}
+	}
+	document.write(curry(1)(2)(3))
+
+  </script>
+ </body>
+</html>

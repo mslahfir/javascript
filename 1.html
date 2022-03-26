@@ -1,0 +1,39 @@
+<html>
+ <body>
+  <style>
+	td{
+		padding:10px;
+		background:#efefef;
+		border:1px solid black;	
+	}
+	th{
+		padding:10px;	
+		
+	}
+  </style>
+	<table id="table">
+		
+	</table>
+  <script>
+  	const arr = [{
+                      "id": 28,
+                      "Title": "Sweden"
+                     }, {
+                      "id": 56,
+                      "Title": "USA"
+                     }, {
+                      "id": 89,
+                      "Title": "England"
+                     }];
+		var table = document.getElementById("table");		
+	arr.forEach((item)=>{	
+		var row = table.insertRow(0);
+		const row1 = table.insertRow(1);
+		var cell1 = row1.insertCell(0);
+	  	var cell2 = row1.insertCell(1);
+		cell1.innerHTML = item.id;
+		cell2.innerHTML = item.Title;
+	})
+  </script>
+ </body>
+</html>
